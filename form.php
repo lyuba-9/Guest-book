@@ -1,5 +1,5 @@
 <?php 
-$dbc = mysqli_connect('localhost', 'root', '1234', 'guest');
+include_once("db.php");
 $query = "SELECT * FROM comments";
 $data = mysqli_query($dbc,$query);
 
@@ -8,7 +8,7 @@ $data = mysqli_query($dbc,$query);
 <html>
 <head>
 <meta charset="utf-8">
-<link href="style/style.css" rel="stylesheet">
+<link href=".css/style.css" rel="stylesheet">
 </head> 
 <body>
 <form  action="comment.php" method="post">
@@ -20,9 +20,33 @@ $data = mysqli_query($dbc,$query);
   <p>
     <input type="submit" name="submit" value="Отправить" />
   </p>
-  <tr class="comment1"></tr>
 </form>
-
+<div class="comments_wrap">
+   <ul>
+       <li>
+            <div class="comment">
+               <div class="author">
+                    Имя
+                  <span class="date">дата</span>
+               </div>
+                
+              <div class="comment_text">комментарий 1</div>
+           </div>
+           <ul>              
+               <li>                    
+                   <div class="comment">                        
+                      <div class="author">                           
+                          Имя                            
+                          <span class="date">дата</span>                        
+                       </div>                                                
+                       <div class="comment_text">комментарий 2</div>                    
+                   </div>                 
+                </li>             
+            </ul>                        
+        </li>     
+    </ul> 
+</div> 
+<div class="comment1">
 <?php 
     if($data && mysqli_num_rows($data) > 0) {
       while ($row = mysqli_fetch_row($data)) {
@@ -39,7 +63,7 @@ $data = mysqli_query($dbc,$query);
       }
     }
 ?>
-
+</div>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 <?php
-$dbc = mysqli_connect('localhost', 'root', '1234', 'guest');
+include_once("db.php");
 if(!isset($_COOKIE['user_id'])) {
 	if(isset($_POST['submit'])) {
 		$user_username = mysqli_real_escape_string($dbc, trim($_POST['username']));
@@ -28,7 +28,7 @@ if(!isset($_COOKIE['user_id'])) {
 <html> 
 <head>
 <meta charset="utf-8">
-<link href="style/style.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -36,7 +36,7 @@ if(!isset($_COOKIE['user_id'])) {
 <?php
 	if(empty($_COOKIE['username'])) {
 ?>
-	<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+	<form  action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
 		<label for="username">Логин:</label>
 	<input type="text" name="username">
 	<label for="password">Пароль:</label>
@@ -48,8 +48,11 @@ if(!isset($_COOKIE['user_id'])) {
 }
 else {
 	?>
+	<div class="page">
 	<p><a href="myprofile.php">Мой профиль</a></p>
+	<p><a href="form.php">Комментарии</a></p>
 	<p><a href="exit.php">Выйти(<?php echo $_COOKIE['username']; ?>)</a></p>
+</div>
 <?php	
 }
 ?>

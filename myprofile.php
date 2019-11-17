@@ -1,5 +1,5 @@
 <?php 
-$dbc = mysqli_connect('localhost', 'root', '1234', 'guest');
+include_once("db.php");
 $user_id = $_COOKIE['user_id'];
 $query = "SELECT `name` , `username`, `country`, `age`, `img_file` FROM `users` WHERE user_id = '$user_id'";
 $data = mysqli_query($dbc,$query);
@@ -101,6 +101,7 @@ echo("Avatar: ". $avatar);
 <html>
 <head>
 <title>Настройки пользователя</title>
+<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 <div align="center"><h4>Настройки пользователя</h4></div>

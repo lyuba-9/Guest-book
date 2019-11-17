@@ -1,5 +1,5 @@
 <?php
-$dbc = mysqli_connect('localhost', 'root', '1234', 'guest') OR DIE('Ошибка подключения к базе данных');
+include_once("db.php");
 if(isset($_POST['submit'])){
 	$username = mysqli_real_escape_string($dbc, trim($_POST['username']));
 	$password1 = mysqli_real_escape_string($dbc, trim($_POST['password1']));
@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
 <html>
 <head>
 <meta charset="utf-8">
-<link href="style/style.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 <content>
