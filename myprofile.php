@@ -93,7 +93,7 @@ $delfull    = $path_to_90_directory.$filename;
       if($result)
         echo "Данные обновлены";
 
-echo("Avatar: ". $avatar);
+//echo("Avatar: ". $avatar);
     
 }
 ?>
@@ -118,6 +118,7 @@ echo("Avatar: ". $avatar);
             <p>Изменить возраст: <br> 
             <input name='age' type='text' value="<?php echo($row['age']) ?>"></p>
             <input type='submit' name='submit' value='Сохранить'>
+            <p><a href="index.php">Главная</a></p>
             </form>
 </body>
 </html>

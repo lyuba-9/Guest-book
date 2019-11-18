@@ -50,7 +50,7 @@ else {
 	?>
 	<div class="page">
 	<p><a href="myprofile.php">Мой профиль</a></p>
-	<p><a href="form.php">Комментарии</a></p>
+	<p><a href="form1.php">Комментарии</a></p>
 	<p><a href="exit.php">Выйти(<?php echo $_COOKIE['username']; ?>)</a></p>
 </div>
 <?php	
