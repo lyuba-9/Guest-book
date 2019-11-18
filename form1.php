@@ -64,6 +64,7 @@ $data = mysqli_query($dbc,$query);
         echo('
             <form method="post" action="comment.php">
            <div class="Otvet">
+           <label>NEW1</label>
                 <input type="text" name="comment" size="40">
               <p>
               <input type="text" size="40" class="otvet2" name="parent_id" style= "display: none;" value="'.$row_1[0].'">
