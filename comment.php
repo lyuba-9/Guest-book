@@ -16,7 +16,12 @@ if(isset($_POST['submit'])) {
 		else{
 		$query ="INSERT INTO `comments` (date, comment, user_id, parent_id ) VALUES ('$date','$comment', '$user_id', '$parent_id')";
 		}
-		mysqli_query($dbc,$query);
+		if (mysqli_query($dbc,$query)) {
+			header('Location: form1.php'); exit();	
+		}
+		else {
+			echo 'Произошла ошибка: '. mysqli_error($dbc);
+		}
 		mysqli_close($dbc);
 		exit();
 	}

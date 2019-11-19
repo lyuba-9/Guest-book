@@ -1,5 +1,5 @@
 <?php 
-include_once("db.php");
+$dbc = mysqli_connect('localhost', 'root', '1234', 'guest') ;
 $query = "SELECT * FROM comments";
 $data = mysqli_query($dbc,$query);
 

@@ -6,6 +6,7 @@
 a {
 	text-decoration: none;
 	color: #333333;
+	float: right;
 }
 ul {
 	list-style-type: none;
@@ -18,40 +19,14 @@ body {
 	padding-top: 30px;
 	
 }
-content {
-	width: 70%;
-	float: left;
-}
-content .articles {
-	width: 48%;
-	min-height: 250px;
-	background: #fff;
-	margin: 0 -0.40em 15px 0;
-	display: inline-block;
-	/*margin: 0 0 15px 5%;*/
-	background-color: #DDDDDD;
-}
-content .articles:nth-child(2n) {
-	margin: 0 -0.40em 15px 3%;
-}
-content .articles h2, content .articles p, content .articles a {
-	padding: 10px;
-	font-style: italic;
-	color: #383838;
-}
-content .articles a {
-	float: right;
-	color: #595959;
-}
-content .articles a:hover {
-	color: #fff;
-	background: #141414;
-}
+
 label, input {
-	width: 70%;
+	
 	display: block;
 	padding: 5px;
 	margin: 0 0 0 20px;
+	border-radius: 5px;
+	margin-bottom: 3px;
 }
 button {
 	width: 40%;
@@ -67,6 +42,7 @@ button:hover {
 	background: #4CAF50;
 	color: #fff;
 }
+
 content img {
 	width: 94%;
 	height: 200px;
@@ -95,6 +71,7 @@ section a{
 .section .page a:last child{
 	padding-bottom: 0 important!;
 }
+
 .comment{
 	margin: 20px;
 	padding: 10px 20px;
@@ -102,18 +79,26 @@ section a{
 	border-width: 1px;
 	border-color: black;
 	width: 300px;
+	background: wheat;
 }
+.com{
+	margin: 20px 50px;
+	padding: 10px 20px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	width: 300px;
+	background: wheat;
+}
+
 .author{
 	color: blue;
 	padding: 3px;
 }
-.button{
-	width: 100px;
-	
+.author1{
+	color: red;
+	padding: 3px;
 }
 .clear {
 	clear: both;
-}
-.Otvet1{
-	width: 50px;
 }

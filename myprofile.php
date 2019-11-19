@@ -1,5 +1,5 @@
 <?php 
-include_once("db.php");
+$dbc = mysqli_connect('localhost', 'root', '1234', 'guest') OR DIE('Ошибка подключения к базе данных');
 $user_id = $_COOKIE['user_id'];
 $query = "SELECT `name` , `username`, `country`, `age`, `img_file` FROM `users` WHERE user_id = '$user_id'";
 $data = mysqli_query($dbc,$query);

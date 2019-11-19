@@ -12,8 +12,13 @@ if(isset($_POST['submit'])){
 		$data = mysqli_query($dbc, $query);
 		if(mysqli_num_rows($data) == 0) {
 			$query ="INSERT INTO `users` (username, password, name, country, age) VALUES ('$username', SHA('$password2'),'$firstname','$country','$age')";
-			mysqli_query($dbc,$query);
-			echo 'Всё готово, можете авторизоваться';
+
+			if (mysqli_query($dbc,$query)) {
+				echo 'Всё готово, можете авторизоваться';
+			}
+			else {
+				echo 'Произошла ошибка: '. mysqli_error($dbc);
+			}
 			mysqli_close($dbc);
 			exit();
 		}

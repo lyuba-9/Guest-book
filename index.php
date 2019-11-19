@@ -1,5 +1,5 @@
 <?php
-include_once("db.php");
+$dbc = mysqli_connect('localhost', 'root', '1234', 'guest') OR DIE('Ошибка подключения к базе данных');
 if(!isset($_COOKIE['user_id'])) {
 	if(isset($_POST['submit'])) {
 		$user_username = mysqli_real_escape_string($dbc, trim($_POST['username']));
