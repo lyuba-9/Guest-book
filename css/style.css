@@ -1,0 +1,104 @@
+
+* {
+	padding: 0;
+	margin: 0;
+}
+a {
+	text-decoration: none;
+	color: #333333;
+	float: right;
+}
+ul {
+	list-style-type: none;
+}
+body {
+	background:lightskyblue;
+	font-family: Arial, sans-serif;
+	font-size: 0.85em;
+	margin: 0 20%;
+	padding-top: 30px;
+	
+}
+
+label, input {
+	
+	display: block;
+	padding: 5px;
+	margin: 0 0 0 20px;
+	border-radius: 5px;
+	margin-bottom: 3px;
+}
+button {
+	width: 40%;
+	padding: 10px;
+	background: #fff;
+	margin: 10px 0 0 20px;
+	border: 2px solid #4CAF50;
+	margin-bottom: 10px;
+	background: #fff;
+
+}
+button:hover {
+	background: #4CAF50;
+	color: #fff;
+}
+
+content img {
+	width: 94%;
+	height: 200px;
+	padding: 3%;
+}
+section {
+	margin-top: 30px;
+	width: 29%;
+	height: 170px;
+	display: flex;
+	padding-top: 5px;
+	background-color: #DDDDDD;
+}
+section a{
+	font-size: 0.9em;
+	display: inline-block;
+	margin-left: 10px;
+}
+.page{
+	display: flex;
+	flex-direction: column;
+}
+.page a{
+	padding-bottom: 25px;
+}
+.section .page a:last child{
+	padding-bottom: 0 important!;
+}
+
+.comment{
+	margin: 20px;
+	padding: 10px 20px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	width: 300px;
+	background: wheat;
+}
+.com{
+	margin: 20px 50px;
+	padding: 10px 20px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	width: 300px;
+	background: wheat;
+}
+
+.author{
+	color: blue;
+	padding: 3px;
+}
+.author1{
+	color: red;
+	padding: 3px;
+}
+.clear {
+	clear: both;
+}
